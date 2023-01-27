@@ -18,9 +18,12 @@
     "preview": "qwik build preview && vite preview --open",
     "start": "vite --open --mode ssr",
     "subfont": "subfont -i --inline-css --no-fallbacks --silent --root dist",
-    "qwik": "qwik"
+    "qwik": "qwik",
+    "buf:generate": "buf generate protobuf"
   },
   "devDependencies": {
+    "@bufbuild/protoc-gen-connect-web": "^0.5.0",
+    "@bufbuild/protoc-gen-es": "^1.0.0",
     "@builder.io/qwik": "0.15.0",
     "@builder.io/qwik-city": "0.0.128",
     "@fontsource/inter": "^4.5.14",
@@ -44,5 +47,10 @@
   },
   "engines": {
     "node": ">=15.0.0"
+  },
+  "dependencies": {
+    "@bufbuild/connect-web": "^0.5.0",
+    "@bufbuild/protobuf": "^1.0.0",
+    "imagetools-core": "^3.2.3"
   }
 }

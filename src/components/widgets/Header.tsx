@@ -95,6 +95,22 @@ export default component$(() => {
                 Github
               </a>
             </li>
+            <li class="dropdown">
+              <button class="font-medium hover:text-gray-900 dark:hover:text-white px-4 py-3 flex items-center transition duration-150 ease-in-out">
+                Account
+              </button>
+              <ul class="dropdown-menu rounded md:absolute pl-4 md:pl-0 md:hidden font-medium md:bg-white md:min-w-[200px] dark:md:bg-slate-800 drop-shadow-xl">
+                <li>
+                  <a 
+                    onClick$={() => { window.localStorage.removeItem('token'); }}
+                    class="font-medium rounded-t md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
+                    href="/login"
+                  >
+                    Logout
+                  </a>
+                </li>
+              </ul>
+            </li>
           </ul>
           <div class="md:self-center flex items-center mb-4 md:mb-0 ml-2">
             <div class="hidden items-center md:flex">
