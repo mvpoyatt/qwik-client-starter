@@ -7,6 +7,7 @@ import ToggleMenu from "~/components/core/ToggleMenu";
 export default component$(() => {
   const store = useStore({
     isScrolling: false,
+    showModal: false,
   });
 
   return (
@@ -107,6 +108,14 @@ export default component$(() => {
                     href="/login"
                   >
                     Logout
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="font-medium rounded-t md:hover:bg-gray-100 dark:hover:bg-gray-700 py-2 px-4 block whitespace-no-wrap"
+                    href="/account"
+                  >
+                    Manage Account
                   </a>
                 </li>
               </ul>

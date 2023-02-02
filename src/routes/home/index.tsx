@@ -1,4 +1,4 @@
-import { component$, Resource, useClientEffect$, useResource$, useStore } from "@builder.io/qwik";
+import { component$, useClientEffect$, useStore } from "@builder.io/qwik";
 import { DocumentHead, useNavigate } from "@builder.io/qwik-city";
 import { userService } from "../../services/user-service";
 
@@ -41,7 +41,7 @@ export const head: DocumentHead = {
     {
       name: "description",
       content:
-        "Home page of basic user login and registration with Qwik.",
+        "Home page of basic user login and registration with Qwik",
     },
   ],
 };
