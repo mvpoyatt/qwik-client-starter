@@ -14,6 +14,11 @@ const addAuthHeader: Interceptor = (next) => async (req) => {
   if (!res.stream) {
     if (res.message?.token) {
       window.localStorage.setItem("token", `${res.message.token}`);
+    } else if (res.header.has("Refresh-Token")) {
+      const newToken = res.header.get("Refresh-Token");
+      if (newToken !== null) {
+        window.localStorage.setItem("token", newToken);
+      }
     }
   }
   return res;
