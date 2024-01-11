@@ -53,7 +53,7 @@ export default component$(() => {
           <div class="card rounded-none dark:bg-slate-800">
             <h1 class="text-2xl font-bold leading-tighter text-center tracking-tighter mb-4 mt-1 font-heading">Register</h1>
             <form preventdefault:submit onSubmit$={ async () =>  {
-              if (userInfo.password.length < 6) {
+              if (userInfo.password.length < 4) {
                 alert('Password must be at least 6 characters');
               } else if (userInfo.password !== userInfo.confirmPassword) {
                 alert('Passwords don\'t match');

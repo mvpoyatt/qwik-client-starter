@@ -25,7 +25,7 @@ const addAuthHeader: Interceptor = (next) => async (req) => {
 };
 
 const transport = createConnectTransport({
-  baseUrl: "http://127.0.0.1:8080",
+  baseUrl: "http://54.236.28.163:8080",
   interceptors: [addAuthHeader],
 });
 
